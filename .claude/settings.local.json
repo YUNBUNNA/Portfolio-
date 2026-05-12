@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(mkdir -p /Users/yunbunna/Documents/Code/Portfolio/src/assets)",
+      "Bash(cp \"/Users/yunbunna/Downloads/DSC_0921 copy.jpg\" /Users/yunbunna/Documents/Code/Portfolio/src/assets/profile.jpg)"
+    ]
+  }
+}
