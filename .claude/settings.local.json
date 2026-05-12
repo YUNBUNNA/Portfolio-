@@ -5,7 +5,11 @@
       "Bash(npm install *)",
       "Bash(npm run *)",
       "Bash(mkdir -p /Users/yunbunna/Documents/Code/Portfolio/src/assets)",
-      "Bash(cp \"/Users/yunbunna/Downloads/DSC_0921 copy.jpg\" /Users/yunbunna/Documents/Code/Portfolio/src/assets/profile.jpg)"
+      "Bash(cp \"/Users/yunbunna/Downloads/DSC_0921 copy.jpg\" /Users/yunbunna/Documents/Code/Portfolio/src/assets/profile.jpg)",
+      "Bash(find ~/Documents/Code -maxdepth 3 -type d | head -20)",
+      "Read(//Users/yunbunna/Documents/Code/**)",
+      "Bash(npx --yes capture-website-cli https://dsh1.netlify.app/ --output=/Users/yunbunna/Documents/Code/Portfolio/src/assets/dsh-preview.png --width=1280 --height=800)",
+      "Bash(npx capture-website-cli *)"
     ]
   }
 }

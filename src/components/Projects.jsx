@@ -1,46 +1,38 @@
 import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import dshImg from '../assets/dsh-preview.png'
+import choullanImg from '../assets/choullan-preview.png'
 
 const projects = [
   {
-    title: 'Look Great V2',
+    title: 'Hand4Hope — Hands of Hope',
     description:
-      'A modern fashion e-commerce platform with product browsing, cart management, and user authentication. Features a sleek UI with advanced filtering and real-time search.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
+      'A community-driven humanitarian platform connecting volunteers and donors with charitable causes. Built with a full-stack architecture to manage events, outreach campaigns, and community engagement in real time.',
+    tech: ['React', 'Tailwind', 'Laravel', 'PHP', 'MySQL'],
+    image: null,
     github: 'https://github.com',
-    demo: 'https://example.com',
-    gradient: 'from-purple-600/20 to-pink-600/20',
+    demo: 'https://hand4hope.vercel.app/',
     accent: '#a855f7',
   },
   {
-    title: 'Memory Game',
+    title: 'DSH — Digital Sports & Health',
     description:
-      'An interactive card-flipping memory game built with vanilla JavaScript. Includes difficulty levels, countdown timer, score tracking, and smooth flip animations.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
+      'A sports club and health platform offering training programs, nutritional guidance, and fitness communities. Members can join activities like football, volleyball, running, basketball, swimming, and cycling with free or premium coaching plans.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    image: dshImg,
     github: 'https://github.com',
-    demo: 'https://example.com',
-    gradient: 'from-pink-600/20 to-rose-600/20',
+    demo: 'https://dsh1.netlify.app/',
     accent: '#ec4899',
   },
   {
-    title: 'Member Only',
+    title: 'Choullan — Car Rental',
     description:
-      'A members-only forum application where users can post anonymous messages. Implements passport.js authentication, session management, and role-based access control.',
-    tech: ['Node.js', 'Express', 'MongoDB', 'EJS'],
+      'A car rental booking platform where users can browse vehicles by type and brand, select pickup and return dates, and reserve instantly. Features premium vehicles including Audi, BMW, Honda, and Toyota with 24/7 roadside support.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    image: choullanImg,
     github: 'https://github.com',
-    demo: 'https://example.com',
-    gradient: 'from-violet-600/20 to-purple-600/20',
+    demo: 'https://choullan.netlify.app/',
     accent: '#7c3aed',
-  },
-  {
-    title: 'Volunteer Platform',
-    description:
-      'A full-stack platform connecting volunteers with non-profit organisations. Features event listing, volunteer registration, admin dashboard, and email notifications.',
-    tech: ['React', 'Django', 'PostgreSQL', 'REST API'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    gradient: 'from-fuchsia-600/20 to-pink-600/20',
-    accent: '#d946ef',
   },
 ]
 
@@ -90,44 +82,48 @@ export default function Projects() {
                 transition={{ type: 'spring', stiffness: 200, damping: 20 }}
               >
                 <div
-                  className={`w-full h-64 rounded-2xl bg-gradient-to-br ${project.gradient} overflow-hidden relative`}
+                  className="w-full h-64 rounded-2xl overflow-hidden relative"
                   style={{
                     border: `1px solid ${project.accent}33`,
                     boxShadow: `0 0 30px ${project.accent}22`,
                   }}
                 >
-                  {/* Decorative grid */}
-                  <div
-                    className="absolute inset-0 opacity-20"
-                    style={{
-                      backgroundImage: `linear-gradient(${project.accent}30 1px, transparent 1px), linear-gradient(90deg, ${project.accent}30 1px, transparent 1px)`,
-                      backgroundSize: '40px 40px',
-                    }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span
-                      className="text-6xl font-black opacity-10"
-                      style={{ color: project.accent }}
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full flex flex-col items-center justify-center gap-3"
+                      style={{ background: `linear-gradient(135deg, ${project.accent}22, #0f172a)` }}
                     >
-                      {project.title.slice(0, 2).toUpperCase()}
-                    </span>
-                  </div>
-                  <div
-                    className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2 translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
-                  >
-                    {project.tech.map(t => (
-                      <span
-                        key={t}
-                        className="text-xs px-2 py-1 rounded-md font-medium"
-                        style={{
-                          background: `${project.accent}22`,
-                          border: `1px solid ${project.accent}44`,
-                          color: project.accent,
-                        }}
-                      >
-                        {t}
+                      <span className="text-5xl font-black opacity-20" style={{ color: project.accent }}>
+                        {project.title.slice(0, 2).toUpperCase()}
                       </span>
-                    ))}
+                      <span className="text-xs tracking-widest uppercase" style={{ color: project.accent }}>
+                        Coming Soon
+                      </span>
+                    </div>
+                  )}
+                  {/* Hover overlay with tech badges */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map(t => (
+                        <span
+                          key={t}
+                          className="text-xs px-2 py-1 rounded-md font-medium"
+                          style={{
+                            background: `${project.accent}33`,
+                            border: `1px solid ${project.accent}66`,
+                            color: '#fff',
+                          }}
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </motion.div>
