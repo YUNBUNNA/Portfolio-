@@ -72,25 +72,25 @@ export default function About() {
           </motion.h2>
 
           <motion.p {...fadeUp(0.3)} className="text-base leading-relaxed" style={{ color: '#94a3b8' }}>
-            I&apos;m a passionate Software Development student actively seeking internship opportunities
-            to apply and expand my skills in a real-world environment. With hands-on experience in both
-            front-end and back-end development, I enjoy building web applications that are clean,
-            functional, and visually engaging.
+            I&apos;m an Information Technology Engineering student at RUPP&apos;s Faculty of Engineering,
+            actively seeking internship opportunities to grow in a real-world environment. My focus is
+            web development — building full-stack applications with modern tools like React, Node.js,
+            PHP, and Laravel that are clean, functional, and visually engaging.
           </motion.p>
 
           <motion.p {...fadeUp(0.4)} className="text-base leading-relaxed" style={{ color: '#94a3b8' }}>
-            I&apos;ve participated in hackathons, collaborated within tech communities, and worked on
-            diverse projects ranging from interactive games to full-stack platforms. I thrive in
-            collaborative environments and am always eager to learn new technologies and tackle
-            challenging problems.
+            I&apos;ve volunteered at the RUPP Engineering Day in 2023 and 2024, completed intensive
+            training at ISTAD and ANT, and shipped real-world projects — from a humanitarian volunteer
+            platform to a sports &amp; health site and a car rental booking app. I thrive in team
+            environments and am always eager to take on new challenges.
           </motion.p>
 
           {/* Stats row */}
           <motion.div {...fadeUp(0.45)} className="grid grid-cols-3 gap-6 py-4">
             {[
               { value: '10+', label: 'Projects' },
-              { value: '3+', label: 'Hackathons' },
-              { value: '2+', label: 'Years Coding' },
+              { value: '2+', label: 'Volunteering' },
+              { value: '3+', label: 'Years Coding' },
             ].map(({ value, label }) => (
               <div key={label} className="text-center">
                 <p className="text-3xl font-black gradient-text">{value}</p>

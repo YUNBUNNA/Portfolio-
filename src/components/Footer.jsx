@@ -10,9 +10,9 @@ const navLinks = [
 ]
 
 const socials = [
-  { icon: FaGithub,   href: 'https://github.com',           label: 'GitHub' },
-  { icon: FaLinkedin, href: 'https://linkedin.com',          label: 'LinkedIn' },
-  { icon: FaTelegram, href: 'https://t.me',                  label: 'Telegram' },
+  { icon: FaGithub,   href: 'https://github.com/YUNBUNNA',                     label: 'GitHub' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/yun-bunna-abb961332/', label: 'LinkedIn' },
+  { icon: FaTelegram, href: 'https://t.me/Yun_Bunna',                           label: 'Telegram' },
   { icon: MdEmail,    href: 'mailto:yunbunna123@gmail.com',  label: 'Email' },
 ]
 

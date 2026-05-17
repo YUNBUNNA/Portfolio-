@@ -9,7 +9,16 @@
       "Bash(find ~/Documents/Code -maxdepth 3 -type d | head -20)",
       "Read(//Users/yunbunna/Documents/Code/**)",
       "Bash(npx --yes capture-website-cli https://dsh1.netlify.app/ --output=/Users/yunbunna/Documents/Code/Portfolio/src/assets/dsh-preview.png --width=1280 --height=800)",
-      "Bash(npx capture-website-cli *)"
+      "Bash(npx capture-website-cli *)",
+      "WebFetch(domain:www.fe.rupp.edu.kh)",
+      "Bash(gh repo *)",
+      "Bash(curl -s https://api.github.com/repos/YUNBUNNA/E_learning_app)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('description',''\\), d.get\\('language',''\\)\\)\")",
+      "Bash(curl -s https://api.github.com/repos/YUNBUNNA/E_learning_app/contents/)",
+      "Bash(python3 -c \"import sys,json; [print\\(f['name']\\) for f in json.load\\(sys.stdin\\)]\")",
+      "Bash(curl -s https://api.github.com/repos/YUNBUNNA/E_learning_app/contents/README.md)",
+      "Bash(python3 -c \"import sys,json,base64; d=json.load\\(sys.stdin\\); print\\(base64.b64decode\\(d['content']\\).decode\\(\\)\\)\")",
+      "Bash(curl -s https://api.github.com/repos/YUNBUNNA/E_learning_app/contents/PROJECT_STATUS.md)"
     ]
   }
 }

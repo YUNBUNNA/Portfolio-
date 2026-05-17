@@ -1,27 +1,42 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa'
 import { MdEmail, MdLocationOn } from 'react-icons/md'
 import { HiPaperAirplane } from 'react-icons/hi'
 
 const socials = [
-  { icon: FaGithub,   href: 'https://github.com',                  label: 'GitHub',   color: '#ffffff' },
-  { icon: FaLinkedin, href: 'https://linkedin.com',                 label: 'LinkedIn', color: '#0a66c2' },
-  { icon: FaTelegram, href: 'https://t.me',                         label: 'Telegram', color: '#26a5e4' },
+  { icon: FaGithub,   href: 'https://github.com/YUNBUNNA',                     label: 'GitHub',   color: '#ffffff' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/yun-bunna-abb961332/', label: 'LinkedIn', color: '#0a66c2' },
+  { icon: FaTelegram, href: 'https://t.me/Yun_Bunna',                           label: 'Telegram', color: '#26a5e4' },
   { icon: MdEmail,    href: 'mailto:yunbunna123@gmail.com',          label: 'Email',    color: '#ec4899' },
 ]
 
 export default function Contact() {
+  const formRef = useRef()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 3000)
-    setForm({ name: '', email: '', message: '' })
+    setStatus('sending')
+try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY },
+      )
+      setStatus('sent')
+      setForm({ name: '', email: '', message: '' })
+      setTimeout(() => setStatus('idle'), 4000)
+    } catch (err) {
+      console.error('EmailJS error:', err)
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   const inputClass = `
@@ -145,6 +160,7 @@ export default function Contact() {
 
           {/* Right — Form */}
           <motion.form
+            ref={formRef}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -197,17 +213,19 @@ export default function Contact() {
 
             <motion.button
               type="submit"
-              className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm text-white transition-all duration-300"
+              disabled={status === 'sending'}
+              className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm text-white transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
               style={{
                 background: 'linear-gradient(135deg, #a855f7, #ec4899)',
                 boxShadow: '0 0 25px rgba(168,85,247,0.35)',
               }}
-              whileHover={{ scale: 1.02, boxShadow: '0 0 40px rgba(168,85,247,0.55)' }}
+              whileHover={{ scale: status === 'sending' ? 1 : 1.02, boxShadow: '0 0 40px rgba(168,85,247,0.55)' }}
               whileTap={{ scale: 0.98 }}
             >
-              {sent ? (
-                <>Message Sent!</>
-              ) : (
+              {status === 'sending' && <>Sending…</>}
+              {status === 'sent'    && <>Message Sent!</>}
+              {status === 'error'   && <>Failed — try again</>}
+              {status === 'idle'    && (
                 <>
                   <HiPaperAirplane size={18} className="-rotate-45" />
                   Send Message

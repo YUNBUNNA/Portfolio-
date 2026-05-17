@@ -10,7 +10,7 @@ const projects = [
       'A community-driven humanitarian platform connecting volunteers and donors with charitable causes. Built with a full-stack architecture to manage events, outreach campaigns, and community engagement in real time.',
     tech: ['React', 'Tailwind', 'Laravel', 'PHP', 'MySQL'],
     image: null,
-    github: 'https://github.com',
+    github: 'https://github.com/AHBOYPHANNETH/Hand4HopeFulll',
     demo: 'https://hand4hope.vercel.app/',
     accent: '#a855f7',
   },
@@ -20,7 +20,7 @@ const projects = [
       'A sports club and health platform offering training programs, nutritional guidance, and fitness communities. Members can join activities like football, volleyball, running, basketball, swimming, and cycling with free or premium coaching plans.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     image: dshImg,
-    github: 'https://github.com',
+    github: 'https://github.com/YUNBUNNA/DSH',
     demo: 'https://dsh1.netlify.app/',
     accent: '#ec4899',
   },
@@ -30,9 +30,19 @@ const projects = [
       'A car rental booking platform where users can browse vehicles by type and brand, select pickup and return dates, and reserve instantly. Features premium vehicles including Audi, BMW, Honda, and Toyota with 24/7 roadside support.',
     tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     image: choullanImg,
-    github: 'https://github.com',
+    github: 'https://github.com/YUNBUNNA/Chuollan-',
     demo: 'https://choullan.netlify.app/',
     accent: '#7c3aed',
+  },
+  {
+    title: 'E-Learning App',
+    description:
+      'A full-featured mobile learning platform built with Flutter and Firebase. Includes course catalog, video lessons, quizzes, progress tracking, certificates, cart & payment, discussion, notifications, instructor dashboard, and admin panel.',
+    tech: ['Flutter', 'Dart', 'Firebase', 'Firestore'],
+    image: null,
+    github: 'https://github.com/YUNBUNNA/E_learning_app',
+    demo: null,
+    accent: '#06b6d4',
   },
 ]
 
@@ -82,7 +92,7 @@ export default function Projects() {
                 transition={{ type: 'spring', stiffness: 200, damping: 20 }}
               >
                 <div
-                  className="w-full h-64 rounded-2xl overflow-hidden relative"
+                  className="w-full h-96 rounded-2xl overflow-hidden relative"
                   style={{
                     border: `1px solid ${project.accent}33`,
                     boxShadow: `0 0 30px ${project.accent}22`,
@@ -166,21 +176,23 @@ export default function Projects() {
 
                 {/* Action buttons */}
                 <div className="flex gap-4 mt-2">
-                  <motion.a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-white"
-                    style={{
-                      background: `linear-gradient(135deg, ${project.accent}, #ec4899)`,
-                      boxShadow: `0 0 20px ${project.accent}40`,
-                    }}
-                    whileHover={{ scale: 1.05, boxShadow: `0 0 30px ${project.accent}60` }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaExternalLinkAlt size={13} />
-                    Live Demo
-                  </motion.a>
+                  {project.demo && (
+                    <motion.a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-white"
+                      style={{
+                        background: `linear-gradient(135deg, ${project.accent}, #ec4899)`,
+                        boxShadow: `0 0 20px ${project.accent}40`,
+                      }}
+                      whileHover={{ scale: 1.05, boxShadow: `0 0 30px ${project.accent}60` }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaExternalLinkAlt size={13} />
+                      Live Demo
+                    </motion.a>
+                  )}
                   <motion.a
                     href={project.github}
                     target="_blank"

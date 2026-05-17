@@ -8,7 +8,7 @@ import { HiDownload } from 'react-icons/hi'
 import profileImg from '../assets/profile.jpg'
 
 const socials = [
-  { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
+  { icon: FaGithub, href: 'https://github.com/YUNBUNNA', label: 'GitHub' },
   { icon: FaLinkedin, href: 'https://www.linkedin.com/in/yun-bunna-abb961332/', label: 'LinkedIn' },
   { icon: FaTelegram, href: 'https://t.me/Yun_Bunna', label: 'Telegram' },
   { icon: MdEmail, href: 'mailto:yunbunna123@gmail.com', label: 'Email' },
@@ -54,7 +54,7 @@ export default function Hero() {
             className="text-sm font-medium tracking-widest uppercase"
             style={{ color: '#a855f7' }}
           >
-            ✦ Software Development Student
+            ✦ IT Engineering Student · RUPP
           </motion.p>
 
           <motion.h1
@@ -69,9 +69,9 @@ export default function Hero() {
             <span style={{ color: '#94a3b8' }}>I&apos;m a </span>
             <TypeAnimation
               sequence={[
-                'Web Developer',   2000,
-                'Front-End Developer', 2000,
-                'UI Designer',     2000,
+                'Web Developer',        2000,
+                'Full-Stack Developer', 2000,
+                'UI Designer',          2000,
               ]}
               wrapper="span"
               speed={50}
@@ -85,9 +85,9 @@ export default function Hero() {
             className="text-base leading-relaxed max-w-lg"
             style={{ color: '#94a3b8' }}
           >
-            Passionate software development student crafting immersive digital experiences.
-            I blend clean code with creative design to build web applications that are
-            as beautiful as they are functional.
+            Information Technology Engineering student at RUPP, focused on web development.
+            I blend clean code with creative design — from React front-ends to Laravel and
+            Node.js backends — building applications that are as beautiful as they are functional.
           </motion.p>
 
           {/* CTA Buttons */}

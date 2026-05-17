@@ -7,6 +7,7 @@ import {
   SiTailwindcss, SiPostgresql, SiPhp, SiLaravel,
   SiC, SiCplusplus, SiMysql,
 } from 'react-icons/si'
+import { TbBrandReactNative } from 'react-icons/tb'
 
 const mainSkills = [
   { icon: FaHtml5,      name: 'HTML5',      color: '#e34f26' },
@@ -26,8 +27,9 @@ const extraSkills = [
   { icon: SiMysql,      name: 'MySQL',      color: '#4479a1' },
   { icon: SiPostgresql, name: 'PostgreSQL',  color: '#336791' },
   { icon: FaFigma,      name: 'Figma',      color: '#f24e1e' },
-  { icon: FaGithub,     name: 'GitHub',     color: '#ffffff' },
-  { icon: FaJava,       name: 'Java',       color: '#f89820' },
+  { icon: FaGithub,          name: 'GitHub',       color: '#ffffff' },
+  { icon: FaJava,            name: 'Java',         color: '#f89820' },
+  { icon: TbBrandReactNative, name: 'React Native', color: '#61dafb' },
 ]
 
 const container = {

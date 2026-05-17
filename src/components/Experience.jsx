@@ -3,43 +3,37 @@ import { HiAcademicCap, HiUserGroup } from 'react-icons/hi'
 
 const experiences = [
   {
-    date: '2024 – Present',
-    title: 'Hackathon Participant',
-    org: 'Various Tech Events',
-    desc: 'Competed in multiple hackathons, collaborating in teams to design and build full-stack solutions under tight deadlines.',
+    date: 'Nov 2024',
+    title: 'Academic Team Volunteer',
+    org: "RUPP Engineering Day 2024 — FE Students' Project Competition",
+    desc: 'Served on the Academic Team at the 7th RUPP Engineering Day held at NICC & CKCC, supporting project evaluations and coordinating student presentations across engineering departments.',
   },
   {
-    date: '2023 – Present',
-    title: 'Tech Community Member',
-    org: 'Developer Community KH',
-    desc: 'Actively engaged in local developer meetups, workshops, and knowledge-sharing sessions to grow alongside peers.',
-  },
-  {
-    date: '2023',
-    title: 'Volunteer IT Support',
-    org: 'Campus Events',
-    desc: 'Assisted in setting up and managing technical infrastructure for university events and student-led workshops.',
+    date: 'Dec 2023',
+    title: 'Audience Experience Team Volunteer',
+    org: 'RUPP Engineering Day 2023 — 10th Anniversary of FE',
+    desc: 'Volunteered as part of the Audience Experience Team at the 6th RUPP Engineering Day & 10th-Year Anniversary of the Faculty of Engineering, managing guest engagement, photo sessions, and event flow.',
   },
 ]
 
 const education = [
   {
     date: '2022 – Present',
-    title: 'Software Development',
-    org: 'University of Puthisastra',
-    desc: 'Bachelor degree programme covering full-stack web development, algorithms, databases, and software engineering principles.',
+    title: 'Bachelor of Information Technology Engineering',
+    org: 'Royal University of Phnom Penh (RUPP) — Faculty of Engineering',
+    desc: '4-year programme covering programming, data structures & algorithms, databases, software engineering, web & cloud computing, network engineering, mobile app development, UI/UX design, and information security — with hands-on practicum from Year 2 onward.',
+  },
+  {
+    date: 'Nov 2024 – Feb 2025',
+    title: 'Frontend Web Development',
+    org: 'ISTAD — Institute of Science and Technology Advanced Development',
+    desc: 'Intensive 3-month course covering HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React, REST API integration, and UI/UX design with Figma.',
   },
   {
     date: '2024',
-    title: 'Full Stack JavaScript',
-    org: 'Bootcamp / Self-Study',
-    desc: 'Intensive training covering Node.js, React, REST APIs, PostgreSQL, and modern JavaScript best practices.',
-  },
-  {
-    date: '2023',
-    title: 'Web Design',
-    org: 'Online Course',
-    desc: 'UI/UX fundamentals, Figma prototyping, responsive layouts, and accessibility-first design principles.',
+    title: 'Full-Stack Web Development',
+    org: 'ANT — Abstract of New Technology',
+    desc: 'Two backend-focused courses covering PHP, MySQL, and Laravel (CMS, e-commerce, POS systems) plus server-side JavaScript with Node.js, Express, and RESTful API design.',
   },
 ]
 
