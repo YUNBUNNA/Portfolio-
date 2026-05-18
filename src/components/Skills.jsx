@@ -5,7 +5,7 @@ import {
 } from 'react-icons/fa'
 import {
   SiTailwindcss, SiPostgresql, SiPhp, SiLaravel,
-  SiC, SiCplusplus, SiMysql,
+  SiC, SiCplusplus, SiMysql, SiFlutter, SiDart,
 } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
 
@@ -18,17 +18,19 @@ const mainSkills = [
   { icon: FaNodeJs,     name: 'Node.js',    color: '#68a063' },
   { icon: SiPhp,        name: 'PHP',        color: '#8892be' },
   { icon: SiLaravel,    name: 'Laravel',    color: '#ff2d20' },
+  { icon: SiFlutter,    name: 'Flutter',    color: '#54c5f8' },
+  { icon: SiDart,       name: 'Dart',       color: '#0175c2' },
+  { icon: SiMysql,      name: 'MySQL',      color: '#4479a1' },
+  { icon: FaPython,     name: 'Python',     color: '#ffd43b' },
 ]
 
 const extraSkills = [
-  { icon: FaPython,     name: 'Python',     color: '#ffd43b' },
-  { icon: SiC,          name: 'C',          color: '#A8B9CC' },
-  { icon: SiCplusplus,  name: 'C++',        color: '#00599C' },
-  { icon: SiMysql,      name: 'MySQL',      color: '#4479a1' },
-  { icon: SiPostgresql, name: 'PostgreSQL',  color: '#336791' },
-  { icon: FaFigma,      name: 'Figma',      color: '#f24e1e' },
-  { icon: FaGithub,          name: 'GitHub',       color: '#ffffff' },
-  { icon: FaJava,            name: 'Java',         color: '#f89820' },
+  { icon: SiC,                name: 'C',            color: '#A8B9CC' },
+  { icon: SiCplusplus,        name: 'C++',          color: '#00599C' },
+  { icon: SiPostgresql,       name: 'PostgreSQL',   color: '#336791' },
+  { icon: FaFigma,            name: 'Figma',        color: '#f24e1e' },
+  { icon: FaGithub,           name: 'GitHub',       color: '#ffffff' },
+  { icon: FaJava,             name: 'Java',         color: '#f89820' },
   { icon: TbBrandReactNative, name: 'React Native', color: '#61dafb' },
 ]
 

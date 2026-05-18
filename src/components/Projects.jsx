@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import dshImg from '../assets/dsh-preview.png'
 import choullanImg from '../assets/choullan-preview.png'
+import elearningImg from '../assets/elearning-preview.png'
 
 const projects = [
   {
@@ -39,7 +40,7 @@ const projects = [
     description:
       'A full-featured mobile learning platform built with Flutter and Firebase. Includes course catalog, video lessons, quizzes, progress tracking, certificates, cart & payment, discussion, notifications, instructor dashboard, and admin panel.',
     tech: ['Flutter', 'Dart', 'Firebase', 'Firestore'],
-    image: null,
+    image: elearningImg,
     github: 'https://github.com/YUNBUNNA/E_learning_app',
     demo: null,
     accent: '#06b6d4',

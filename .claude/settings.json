@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/Users/yunbunna/Documents/Pictures/Screenshot 2026-05-18 at 9.25.56 at night.png\" \"/Users/yunbunna/Documents/Code/Portfolio/src/assets/elearning-preview.png\")"
+    ],
+    "additionalDirectories": [
+      "/Users/yunbunna/Documents/Pictures"
+    ]
+  }
+}
