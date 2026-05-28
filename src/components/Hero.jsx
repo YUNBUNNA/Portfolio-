@@ -106,8 +106,8 @@ export default function Hero() {
             </motion.button>
 
             <motion.a
-              href="/cv.pdf"
-              download
+              href="/YunBunna_CV.pdf"
+              download="YunBunna_CV"
               className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300"
               style={{
                 border: '1px solid rgba(168,85,247,0.5)',

@@ -101,8 +101,8 @@ export default function About() {
 
           <motion.a
             {...fadeUp(0.5)}
-            href="/cv.pdf"
-            download
+            href="/YunBunna_CV.pdf"
+            download="YunBunna_CV"
             className="self-start flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300"
             style={{
               border: '1px solid rgba(168,85,247,0.5)',
